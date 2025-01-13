@@ -10,4 +10,8 @@ export class TodoService {
   deleteTodo(id:number){
 
   }
+
+  getTodoList(){
+    
+  }
 }

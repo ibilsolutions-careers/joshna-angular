@@ -5,8 +5,6 @@
 <button type="submit">Add Items</button>
 </form>
 
-
-
 <!-- List todo items -->
 <div>
   <p>List the task</p>
@@ -14,6 +12,7 @@
   <li *ngFor="let item of todoItemList">
   <h3>item.item</h3>
   </li>
-  <button type="button" (onClick)="deleteItem(item.id)">Delete</button>
+  <!--  Delete todo item -->
+  <button type="button" (onClick)="deleteItem(item.id)">Delete</button> 
 </ul>
 </div>

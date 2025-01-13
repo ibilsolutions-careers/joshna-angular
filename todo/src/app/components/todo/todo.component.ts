@@ -46,4 +46,8 @@ deleteItem(id:number){
 // api call
 this.todoService.deleteTodo(id);
 }
+
+getTodoItems(){
+  this.todoItemList = this.todoService.getTodoList();
+}
 }
