@@ -40,14 +40,17 @@ onSubmit(todoForm:NgForm){
   }
 
   this.todoItemList.push(data);
+  this.todoService.getTodoList();
+
 }
 
 deleteItem(id:number){
 // api call
 this.todoService.deleteTodo(id);
+this.todoService.getTodoList();
 }
 
 getTodoItems(){
-  this.todoItemList = this.todoService.getTodoList();
+  this.todoService.getTodoList();//subcribe the api to get data
 }
 }
