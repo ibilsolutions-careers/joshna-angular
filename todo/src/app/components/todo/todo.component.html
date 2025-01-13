@@ -1,0 +1,19 @@
+<!-- create todo item -->
+<form #todoForm="ngForm" (ngSubmit)="onSubmit(todoForm)">
+<label id="data">Todo Items</label>
+<input for="data" name="data" type=submit required ngModel>
+<button type="submit">Add Items</button>
+</form>
+
+
+
+<!-- List todo items -->
+<div>
+  <p>List the task</p>
+<ul>
+  <li *ngFor="let item of todoItemList">
+  <h3>item.item</h3>
+  </li>
+  <button type="button" (onClick)="deleteItem(item.id)">Delete</button>
+</ul>
+</div>
